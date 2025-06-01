@@ -15,7 +15,7 @@ SeekLoginSiteは、Seleniumを利用してWeb上のログインページを自�
    pip install selenium webdriver-manager
    ```
 
-2. `web_login_finder.py` を実行します。検索クエリは `main` 関数内で指定されています。
+2. `web_login_finder.py` を実行します。検索クエリはファイル冒頭の `SEARCH_WORD` 変数で設定してください。
    ```bash
    python web_login_finder.py
    ```

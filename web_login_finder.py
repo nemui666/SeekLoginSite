@@ -8,6 +8,9 @@ import re
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+# 検索に使用する語句を設定
+SEARCH_WORD = "toto login"
+
 class LoginPageFinder:
     def __init__(self, debug=False):
         self.debug = debug  # デバッグフラグを追加
@@ -204,7 +207,7 @@ def main():
     # デバッグモードを指定してインスタンスを作成
     finder = LoginPageFinder(debug=True)  # Trueで詳細表示、Falseで通常表示
     try:
-        search_query = "toto login"
+        search_query = SEARCH_WORD
         print("\n処理を開始します...")
         print("Chromeブラウザを初期化中...")
         login_sites = finder.find_login_sites(search_query)
